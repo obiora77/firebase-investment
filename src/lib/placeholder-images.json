@@ -1,3 +1,34 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-background",
+      "description": "Abstract financial chart background",
+      "imageUrl": "https://picsum.photos/seed/hero/1920/1080",
+      "imageHint": "finance abstract"
+    },
+    {
+      "id": "about-summary-image",
+      "description": "Modern office environment with team members",
+      "imageUrl": "https://picsum.photos/seed/about/800/600",
+      "imageHint": "team office"
+    },
+    {
+      "id": "testimonial-avatar-1",
+      "description": "Smiling person for a testimonial",
+      "imageUrl": "https://picsum.photos/seed/avatar1/100/100",
+      "imageHint": "person smiling"
+    },
+    {
+      "id": "testimonial-avatar-2",
+      "description": "Professional looking person for a testimonial",
+      "imageUrl": "https://picsum.photos/seed/avatar2/100/100",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "testimonial-avatar-3",
+      "description": "Happy user for a testimonial",
+      "imageUrl": "https://picsum.photos/seed/avatar3/100/100",
+      "imageHint": "person happy"
+    }
+  ]
 }
