@@ -1,7 +1,11 @@
+import type React from "react";
 import type { Metadata } from "next";
+import { Header } from "@/components/layout/header"
+import { Footer } from "@/components/layout/footer"
 import { Toaster } from "@/components/ui/toaster";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import { AuthProvider } from "@/context/auth-context";
+import Script from "next/script";
+import Tawk from "@/components/tawk";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -28,11 +32,15 @@ export default function RootLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="font-body antialiased bg-background text-foreground">
+      <body className="font-body antialiased bg-background text-foreground overflow-x-hidden">
         <div className="flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
+          <AuthProvider>
+            <Header />
+            {children}
+            <Tawk />
+            <Footer />
+          </AuthProvider>
+          {/* Chat widget (hidden for authenticated users) */}
         </div>
         <Toaster />
       </body>

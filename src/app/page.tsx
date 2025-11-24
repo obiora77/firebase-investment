@@ -1,19 +1,24 @@
-import { Hero } from "@/components/sections/hero";
-import { CryptoTicker } from "@/components/sections/crypto-ticker";
-import { PlansSummary } from "@/components/sections/plans-summary";
-import { AboutSummary } from "@/components/sections/about-summary";
-import { Testimonials } from "@/components/sections/testimonials";
-import { MarketChart } from "@/components/sections/market-chart";
+"use client"
+
+import { useEffect, useState } from "react"
+import { useAuth } from "@/context/auth-context"
+import DashboardPage from "@/app/dashboard/page"
+import LandingPage from "@/components/landing-page"
 
 export default function Home() {
+  const { user } = useAuth()
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
   return (
-    <>
-      <Hero />
-      <CryptoTicker />
-      <MarketChart />
-      <PlansSummary />
-      <AboutSummary />
-      <Testimonials />
-    </>
-  );
+   <main className="flex-grow">
+      
+      {user ? <DashboardPage /> : <LandingPage />}
+   </main>
+  ) 
 }

@@ -1,7 +1,17 @@
+"use client"
+
 import Link from "next/link";
 import { Mountain, Twitter, Facebook, Linkedin } from "lucide-react";
+import { usePathname } from "next/navigation"
 
 export function Footer() {
+  const pathname = usePathname()
+
+  // Hide footer on auth pages
+  if (pathname?.startsWith("/login") || pathname?.startsWith("/register")) {
+    return null
+  }
+
   return (
     <footer className="bg-muted py-12 text-muted-foreground">
       <div className="container mx-auto grid grid-cols-1 gap-8 md:grid-cols-4">

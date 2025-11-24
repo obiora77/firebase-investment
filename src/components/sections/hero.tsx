@@ -38,7 +38,7 @@ export function Hero() {
             asChild
             size="lg"
             variant="outline"
-            className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+            className="border-primary-foreground hover:bg-primary-foreground text-primary"
           >
             <Link href="/investment-plans">View Plans</Link>
           </Button>
