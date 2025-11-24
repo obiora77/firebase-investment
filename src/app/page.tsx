@@ -17,7 +17,6 @@ export default function Home() {
 
   return (
    <main className="flex-grow">
-      
       {user ? <DashboardPage /> : <LandingPage />}
    </main>
   ) 

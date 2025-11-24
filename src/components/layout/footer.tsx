@@ -7,8 +7,13 @@ import { usePathname } from "next/navigation"
 export function Footer() {
   const pathname = usePathname()
 
-  // Hide footer on auth pages
-  if (pathname?.startsWith("/login") || pathname?.startsWith("/register")) {
+  // Hide footer on auth & verification pages
+  if (
+    pathname?.startsWith("/login") ||
+    pathname?.startsWith("/register") ||
+    pathname?.startsWith("/otp") ||
+    pathname?.startsWith("/forgot-password")
+  ) {
     return null
   }
 

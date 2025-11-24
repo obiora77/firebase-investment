@@ -4,7 +4,6 @@ import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { Toaster } from "@/components/ui/toaster";
 import { AuthProvider } from "@/context/auth-context";
-import Script from "next/script";
 import Tawk from "@/components/tawk";
 import "./globals.css";
 

@@ -13,8 +13,13 @@ export function Header() {
   const pathname = usePathname()
   const { user, signOut } = useAuth()
 
-  // Hide header on auth pages
-  if (pathname?.startsWith("/login") || pathname?.startsWith("/register")) {
+  // Hide header on auth & verification pages
+  if (
+    pathname?.startsWith("/login") ||
+    pathname?.startsWith("/register") ||
+    pathname?.startsWith("/otp") ||
+    pathname?.startsWith("/forgot-password")
+  ) {
     return null
   }
   const navLinks = [
